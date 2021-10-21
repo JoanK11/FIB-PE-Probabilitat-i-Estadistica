@@ -1,18 +1,18 @@
-# Distribución Binomial
+# DistribuciÃ³n Binomial
 # Sean las siguientes variables aleatorias discretas:
     # X1 ~ B(14, 0.35)
     n1 = 14; p1 = 0.35; 
     # X2 ~ B(21, 0.838)
     n2 = 21; p2 = 0.838;
-# Responde a las siguientes preguntas. Ten en cuenta que se espera que las tres primeras se respondan con tablas; para las tres siguientes es mejor utilizar un programa que facilite los resultados exactos, de lo contrario será muy difícil conseguir la precisión requerida (cuatro decimales).
+# Responde a las siguientes preguntas. Ten en cuenta que se espera que las tres primeras se respondan con tablas; para las tres siguientes es mejor utilizar un programa que facilite los resultados exactos, de lo contrario serÃ¡ muy difÃ­cil conseguir la precisiÃ³n requerida (cuatro decimales).
 
-# FORMULARI COMPARACIÓ ÚNICA
+# FORMULARIO COMPARACIÃ“N ÃšNICA
     # P(X >= k)  -->  1 - pbinom(k-1, n, p)
     # P(X >  k)  -->  1 - pbinom(k, n, p)
     # P(X <= k)  -->  pbinom(k, n, p)
     # P(X <  k)  -->  pbinom(k-1, n, p)
 
-# FORMULARI COMPARACIÓ DOBLE
+# FORMULARIO COMPARACIÃ“N DOBLE
     # P(k1 <  X <= k2) -->  pbinom(k2, n, p) - pbinom(k1, n, p)
     # P(k1 <= X <= k2) -->  pbinom(k2, n, p) - pbinom(k1-1, n, p)
     # P(k1 <= X <  k2) -->  pbinom(k2-1, n, p) - pbinom(k1-1, n, p)
@@ -28,7 +28,7 @@ k1 = 4; k2 = 9;
 pregunta2 <- pbinom(k2, n1, p1) - pbinom(k1, n1, p1);
 pregunta2;
 
-# Pregunta 3:  ¿Cuál es el menor valor entero k tal que P(X1 <= k) es superior a 0.8905?
+# Pregunta 3:  Â¿CuÃ¡l es el menor valor entero k tal que P(X1 <= k) es superior a 0.8905?
 k = 0.8905;
 pregunta3 <- qbinom(k, n1, p1);
 pregunta3;
