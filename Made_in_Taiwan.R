@@ -9,7 +9,7 @@ mes1 = 1; mes2 = 4;
 diff = mes2 - mes1;
 lambda = 1/mitjana;
 pregunta1 <- 1 - pexp(diff, lambda);
-pregunta1
+pregunta1;
 
 # Pregunta 2: Quina es la probabilitat que un component duri entre 2 i 21 mesos?
 mes_i = 2; mes_f = 21;
