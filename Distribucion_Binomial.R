@@ -13,9 +13,9 @@
     # P(X <  k)  -->  pbinom(k-1, n, p)
 
 # FORMULARIO COMPARACIÓN DOBLE
-    # P(k1 <  X <= k2) -->  pbinom(k2, n, p) - pbinom(k1, n, p)
     # P(k1 <= X <= k2) -->  pbinom(k2, n, p) - pbinom(k1-1, n, p)
     # P(k1 <= X <  k2) -->  pbinom(k2-1, n, p) - pbinom(k1-1, n, p)
+    # P(k1 <  X <= k2) -->  pbinom(k2, n, p) - pbinom(k1, n, p)
     # P(k1 <  X <  k2) -->  pbinom(k2-1, n, p) - pbinom(k1, n, p)
 
 # Pregunta 1: P(X1 <= 9)
