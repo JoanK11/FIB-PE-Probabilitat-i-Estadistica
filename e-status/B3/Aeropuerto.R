@@ -1,17 +1,17 @@
 # Aeropuerto
-# En un aeropuerto, la llegada de pasajeros se produce de acuerdo a un proceso aleatorio, ya que no se puede saber cu醤do se va a producir la pr髕ima llegada.
+# En un aeropuerto, la llegada de pasajeros se produce de acuerdo a un proceso aleatorio, ya que no se puede saber cu谩ndo se va a producir la pr贸xima llegada.
 
-# Los pasajeros obtienen su tarjeta de embarque en los puntos de facturaci髇. La probabilidad de que un pasajero encuentre cola en facturaci髇 es {x = 0.384}. Por otro lado, la probabilidad de que un pasajero no tenga que facturar (porque s髄o lleva equipaje de mano) es {y = 0.504}; adem醩, se sabe que el {z = 11.2%} de los pasajeros que no llevan equipaje para facturar encuentran cola cuando van a recoger su tarjeta de embarque.
+# Los pasajeros obtienen su tarjeta de embarque en los puntos de facturaci贸n. La probabilidad de que un pasajero encuentre cola en facturaci贸n es {x = 0.384}. Por otro lado, la probabilidad de que un pasajero no tenga que facturar (porque s贸lo lleva equipaje de mano) es {y = 0.504}; adem谩s, se sabe que el {z = 11.2%} de los pasajeros que no llevan equipaje para facturar encuentran cola cuando van a recoger su tarjeta de embarque.
 
 # Definiremos las variables discretas:
-  # X = "0 si no encuentra cola en facturaci髇; 1 si encuentra",
-  # Y = "0 si s髄o lleva equipaje de mano; 1 si lleva equipaje para facturar".
+  # X = "0 si no encuentra cola en facturaci贸n; 1 si encuentra",
+  # Y = "0 si s贸lo lleva equipaje de mano; 1 si lleva equipaje para facturar".
 # Responda a las siguientes preguntas. Los valores han de ser correctos hasta el decimal que se indique (redondee hacia arriba o hacia abajo si es preciso).
 x = 0.384;
 y = 0.504;
 z = 0.112;
 
-# Pregunta 1: 緾u醠 es la funci髇 de probabilidad conjunta de X e Y?
+# Pregunta 1: 驴Cu谩l es la funci贸n de probabilidad conjunta de X e Y?
 #       Y=0     Y=1
 # X=0    a       b
 # X=1    c       d
@@ -20,33 +20,33 @@ c = y*z;
 d = x - c;
 a = y - c;
 b = 1 - a - c - d;
-a; b; c; d;
+print(paste(a, b, c, d));
 
-# Pregunta 2: 緾u醤to vale la covariancia entre ambas variables?
+# Pregunta 2: 驴Cu谩nto vale la covariancia entre ambas variables?
 esperancaX = c + d;
 esperancaY = b + d;
 cov = (0-esperancaX)*(0-esperancaY)*a + (0-esperancaX)*(1-esperancaY)*b + (1-esperancaX)*(0-esperancaY)*c + (1-esperancaX)*(1-esperancaY)*d;
 cov;
 
-# Pregunta 3: Cierto punto de facturaci髇 se caracteriza porque el n鷐ero de viajeros que llegan por minuto se distribuye seg鷑 una ley Poisson con una tasa de llegadas de {promedio = 10.5}. Indique la esperanza y la desviaci髇 est醤dar de esta variable.
+# Pregunta 3: Cierto punto de facturaci贸n se caracteriza porque el n煤mero de viajeros que llegan por minuto se distribuye seg煤n una ley Poisson con una tasa de llegadas de {promedio = 10.5}. Indique la esperanza y la desviaci贸n est谩ndar de esta variable.
 promedio = 10.5;
 desviacion = sqrt(promedio);
-promedio; desviacion;
+print(paste(promedio, desviacion));
 
-# Pregunta 4: Considerando los mostradores de facturaci髇 del 1 al 6 {n = 6} caracterizados por una probabilidad {p = 0.52} de observar exactamente 0 llegadas en un minuto, indique la esperanza y la varianza de la variable n鷐ero de puntos de facturaci髇 con 0 llegadas en un minuto dado.
+# Pregunta 4: Considerando los mostradores de facturaci贸n del 1 al 6 {n = 6} caracterizados por una probabilidad {p = 0.52} de observar exactamente 0 llegadas en un minuto, indique la esperanza y la varianza de la variable n煤mero de puntos de facturaci贸n con 0 llegadas en un minuto dado.
 n = 6;
 p = 0.52;
 esperanca = n*p;
 desviacion = n*p*(1-p);
-esperanca; desviacion;
+print(paste(esperanca, desviacion));
 
-# Pregunta 5: Si consideramos los {n = 215} mostradores de facturaci髇 de una terminal caracterizados por una probabilidad {p = 0.047} de observar m醩 de 3 llegadas en un minuto, halle la esperanza y la desviaci髇 est醤dar de la variable n鷐ero de puntos de facturaci髇 con m醩 de 3 llegadas en un minuto, usando el modelo Binomial.
+# Pregunta 5: Si consideramos los {n = 215} mostradores de facturaci贸n de una terminal caracterizados por una probabilidad {p = 0.047} de observar m谩s de 3 llegadas en un minuto, halle la esperanza y la desviaci贸n est谩ndar de la variable n煤mero de puntos de facturaci贸n con m谩s de 3 llegadas en un minuto, usando el modelo Binomial.
 n = 215;
 p = 0.047;
 esperanca = n*p;
 desviacion = sqrt(n*p*(1-p));
-esperanca; desviacion;
+print(paste(esperanca, desviacion));
 
 # Pregunta 6: Repita la pregunta para un supuesto en el que empleamos un modelo de Poisson.
 desviacion = sqrt(esperanca);
-esperanca; desviacion;
+print(paste(esperanca, desviacion));
