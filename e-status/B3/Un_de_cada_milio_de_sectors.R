@@ -6,7 +6,6 @@ prob = 0.1653;
 # Pregunta 1: Una d'aquestes distribucions correspon al nombre de sectors defectuosos d'un disc de 325 GB en un any (es mostren els valors corresponents al 99% central). Selecciona la distribució correcta (1, 2 o 3).
 lambda = -log(prob)*tamany/100;
 plot(0:15, dpois(0:15, lambda), type = "h");
-# El resultat serà la gràfica que tingui en els valors x1, x2, x3 i x4 les seves probabilitats corresponents.
 
 # Pregunta 2: Quin seria el nombre esperat de defectes en el disc que es comercialitza, per a un hipotètic periode de {anys = 4} anys i {mesos = 6} mesos d'activitat?
 anys = 4; mesos = 6;
