@@ -13,10 +13,10 @@ temps = anys + mesos/12;
 pregunta2 <-  lambda*temps;
 pregunta2;
 
-# Pregunta 3: Segurament és preferible tenir una mesura de quin és el risc en una situació més extrema. Per exemple, saber quin és el màxim nombre previst de sectors defectuosos, amb un error del {error = 5}%, per discos amb {anys = 4} anys i {mesos = 6} mesos d'antiguitat. Respon amb un nombre enter, arrodonit per excés.
-error = 5;
+# Pregunta 3: Segurament és preferible tenir una mesura de quin és el risc en una situació més extrema. Per exemple, saber quin és el màxim nombre previst de sectors defectuosos, amb un error del {error = 5%}, per discos amb {anys = 4} anys i {mesos = 6} mesos d'antiguitat. Respon amb un nombre enter, arrodonit per excés.
+error = 0.05;
 temps = anys + mesos/12;
-pregunta3 <- ceiling(qnorm(1-error/100, lambda*temps, sqrt(lambda*temps)));
+pregunta3 <- ceiling(qnorm(1-error, lambda*temps, sqrt(lambda*temps)));
 pregunta3;
 
 # Pregunta 4: La garantia dels discs estableix que es reemplaçaran de franc, i per un únic cop, els discos avariats dins del període de garantia, entenent-se per avariat un disc amb més de 'n' sectors defectuosos. Calculeu quin ha de ser el valor de 'n' per tal que, en promig, només calgui substituir, com a màxim, un 1% dels discos al llarg d'un període de garantia de {anys = 3} anys.
