@@ -33,7 +33,7 @@ p1 <- pnorm(n, lambda*anys1, sqrt(lambda*anys1));
 p2 <- pnorm(n, lambda*anys2, sqrt(lambda*anys2));
 millor = "S";
 if (p1 >= p2) millor = "N";
-print(paste(1 - p2, millor));
+pregunta5 <- print(paste(1 - p2, millor));
 
 # Pregunta 6: Calculeu el valor esperat del cost per substitució en garantia per disc venut, si el període de garantia és de {anys = 3} anys, 'n' = {n = 24} i el cost d'un disc és de {preu = 1542} euros.
 anys = 3;
