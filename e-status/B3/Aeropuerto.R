@@ -20,33 +20,33 @@ c = y*z;
 d = x - c;
 a = y - c;
 b = 1 - a - c - d;
-print(paste(a, b, c, d));
+pregunta1 <- print(paste(a, b, c, d));
 
 # Pregunta 2: ¿Cuánto vale la covariancia entre ambas variables?
 esperancaX = c + d;
 esperancaY = b + d;
-cov = (0-esperancaX)*(0-esperancaY)*a + (0-esperancaX)*(1-esperancaY)*b + (1-esperancaX)*(0-esperancaY)*c + (1-esperancaX)*(1-esperancaY)*d;
-cov;
+pregunta2 <- (0-esperancaX)*(0-esperancaY)*a + (0-esperancaX)*(1-esperancaY)*b + (1-esperancaX)*(0-esperancaY)*c + (1-esperancaX)*(1-esperancaY)*d;
+pregunta2;
 
 # Pregunta 3: Cierto punto de facturación se caracteriza porque el número de viajeros que llegan por minuto se distribuye según una ley Poisson con una tasa de llegadas de {promedio = 10.5}. Indique la esperanza y la desviación estándar de esta variable.
 promedio = 10.5;
 desviacion = sqrt(promedio);
-print(paste(promedio, desviacion));
+pregunta3 <- print(paste(promedio, desviacion));
 
 # Pregunta 4: Considerando los mostradores de facturación del 1 al 6 {n = 6} caracterizados por una probabilidad {p = 0.52} de observar exactamente 0 llegadas en un minuto, indique la esperanza y la varianza de la variable número de puntos de facturación con 0 llegadas en un minuto dado.
 n = 6;
 p = 0.52;
 esperanca = n*p;
 desviacion = n*p*(1-p);
-print(paste(esperanca, desviacion));
+pregunta4 <- print(paste(esperanca, desviacion));
 
 # Pregunta 5: Si consideramos los {n = 215} mostradores de facturación de una terminal caracterizados por una probabilidad {p = 0.047} de observar más de 3 llegadas en un minuto, halle la esperanza y la desviación estándar de la variable número de puntos de facturación con más de 3 llegadas en un minuto, usando el modelo Binomial.
 n = 215;
 p = 0.047;
 esperanca = n*p;
 desviacion = sqrt(n*p*(1-p));
-print(paste(esperanca, desviacion));
+pregunta5 <- print(paste(esperanca, desviacion));
 
 # Pregunta 6: Repita la pregunta para un supuesto en el que empleamos un modelo de Poisson.
 desviacion = sqrt(esperanca);
-print(paste(esperanca, desviacion));
+pregunta6 <- print(paste(esperanca, desviacion));
