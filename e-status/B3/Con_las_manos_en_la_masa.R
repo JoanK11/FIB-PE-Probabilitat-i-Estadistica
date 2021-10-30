@@ -8,7 +8,6 @@ n = 65;
 # Pregunta 1: Suponga que la distribución de la duración de un vídeo es {X}, con extremo inferior = {a = 2.5} minutos. ¿Cuánto vale su variancia?
 
 # Si X = uniforme asigna 0 a la variable X. Si X = exponencial asigna 1 a la variable X.
-# En este ejemplo haremos que X sea uniforme.
 X = ;
 
 if (X == 0) {
