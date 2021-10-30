@@ -18,29 +18,24 @@ if (X == 0) {
   lambda = 1/esperanca
   pregunta1 <- 1/lambda^2
 }
-
 pregunta1;
 
 # Pregunta 2: ¿Probabilidad de que un vídeo dure por lo menos {x = 8.58} minutos?
 x = 8.58;
-
 if (X == 0) {
   pregunta2 <- 1 - punif(x, a, b);
 } else {
   pregunta2 <- 1 - pexp(x, lambda);
 }
-
 pregunta2;
 
 # Pregunta 3: ¿Probabilidad de que Arguiñano emplee en una receta un tiempo superior a {x = 11.95} minutos?
 x = 11.95;
-
 if (X == 0) {
   pregunta3 <- 1 - punif(x, a, b);
 } else {
   pregunta3 <- exp(-lambda*x);
 }
-
 pregunta3;
 
 # Pregunta 4: Cada colección de 65 vídeos es grabada en un DVD con capacidad de {c = 4.3} GB (1GB = 1024MB).
@@ -48,12 +43,10 @@ pregunta3;
 # Para la distribución del tamaño de la colección, considere la aplicación del Teorema Central del Límite.
 capacidad = 4.3*1024;
 espacio = 8.8;
-
 esperanca2 = esperanca*n*espacio;
 variancia = pregunta1;
 desviacion2 = sqrt(variancia*n)*espacio;
 pregunta4 <- 1 - pnorm(capacidad, esperanca2, desviacion2);
-
 pregunta4;
 
 # Pregunta 5:  ¿Cuál es el tamaño máximo en MB (con probabilidad {p = 99%}) que puede alcanzar una colección? Redondee al entero más próximo.
@@ -63,7 +56,6 @@ pregunta5;
 
 # Pregunta 6: ¿Cuántos vídeos debería incluir una colección para tener una seguridad del {p = 95%} de que cabrá en un DVD? Redondee el resultado a un entero por defecto.
 p = 0.95;
-
 for (i in n:1) {
   if (qnorm(p, i*esperanca, sqrt(i*variancia))*espacio < capacidad) break;
 }
