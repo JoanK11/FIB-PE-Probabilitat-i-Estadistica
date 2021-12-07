@@ -18,14 +18,12 @@ pregunta3 <- (meanB - meanW)/se
 pregunta3
 
 # Pregunta 4: Quina és correcta?
-# 1. hem demostrat que l'esforç és similar als dos equips.
-# 2. B empra més temps per resoldre tasques
-# 3. W empra més temps per resoldre tasques
-# 4. no es pot assegurar res
+  # 1. hem demostrat que l'esforç és similar als dos equips.
+  # 2. B empra més temps per resoldre tasques
+  # 3. W empra més temps per resoldre tasques
+  # 4. no es pot assegurar res
 
-if(abs(pregunta3) > qt(0.975, nB + nW - 2)) {
-  print('X'); # Opció de rebutjar, B i W no són iguals (en aquest cas no surt)
-} else {
+if (abs(pregunta3) < qt(0.975, nB + nW - 2)) {
   print(4); # No podem rebutjar
 }
 
@@ -48,9 +46,9 @@ pregunta7 <- qf(1-alpha/2, nW - 1, nB - 1)
 pregunta7
 
 # Pregunta 8: D'acord amb els resultats trobats:
-# 1. l'evidència ens diu que tenim dues variàncies diferents.
-# 2. hem trobat proves de que la variància a B és igual a la de W.
-# 3. és versemblant que els dos equips presentin homogeneïtat quant a la dispersió dels seus temps.
+  # 1. l'evidència ens diu que tenim dues variàncies diferents.
+  # 2. hem trobat proves de que la variància a B és igual a la de W.
+  # 3. és versemblant que els dos equips presentin homogeneïtat quant a la dispersió dels seus temps.
 
 # Si F > pregunta7 --> Rebutgem --> 1
 # Si F < pregunta7 --> No podem rebutjar --> 3
