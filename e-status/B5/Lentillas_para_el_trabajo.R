@@ -16,33 +16,27 @@ for (i in 1:n) {
 }
 nN = length(HumedadNew); nR = length(HumedadRef)
 # Media Ref
-pregunta1 <- mean(HumedadRef)
+pregunta1 <- mean(HumedadRef); pregunta1
 # Media New
-pregunta1 <- mean(HumedadNew)
-pregunta1
+pregunta1 <- mean(HumedadNew); pregunta1
 
 # Pregunta 2: Halla las diferencias (New - Ref) en la humedad medida entre los dos tipos de lente, y calcula el promedio de estas diferencias.
 D <- HumedadNew - HumedadRef; nD = length(D)
-pregunta2 <- mean(D)
-pregunta2
+pregunta2 <- mean(D); pregunta2
 
 # Pregunta 3: Calcula la desviación típica de las diferencias
-pregunta3 <- sd(D)
-pregunta3
+pregunta3 <- sd(D); pregunta3
 
 # Pregunta 4: Calcula la desviación típica de la media de las diferencias (el error típico)
 sD = pregunta3
-pregunta4 <- sD/sqrt(nD)
-pregunta4
+pregunta4 <- sD/sqrt(nD); pregunta4
 
 # Pregunta 5: Calcula el valor del estadístico para contrastar la hipotesis nula:
 # "no hay diferencia en humedad entre lentillas de tipo New y de tipo Ref".
-pregunta5 <- pregunta2/pregunta4
-pregunta5
+pregunta5 <- pregunta2/pregunta4; pregunta5
 
 # Pregunta 6: ¿Cuántos grados de libertad hay que utilizar para la distribución de referencia del estadístico calculado?
-pregunta6 = nD - 1
-pregunta6
+pregunta6 = nD - 1; pregunta6
 
 # Pregunta 7: Calcula el p-valor de la prueba de hipótesis anterior.
 T = pregunta5; grados = pregunta6
